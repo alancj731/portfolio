@@ -27,10 +27,13 @@
             justify-content: start;
             gap: 20px;
             color: black;
+    
             a{
                 font-size: 25px;
+                &:hover {
+                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+                }
             }
-
         }
     }
     button{
