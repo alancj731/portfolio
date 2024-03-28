@@ -5,27 +5,38 @@ import "../../sidebar/sidebar.scss";
 const variants = {
   open: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 1,
     },
   },
   closed: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.5,
       staggerDirection: -1,
     },
+  },
+};
+
+const itemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
   },
 };
 
 const Links = () => {
   const items = ["Homepage", "Portfolio", "Contact", "About"];
   return (
-    <div className="links">
+    <motion.div className="links" variants={variants}>
       {items.map((item) => (
-        <a href={`#${item}`} key={item} >
+        <motion.a href={`#${item}`} key={item} variants={itemVariants}>
           {item}
-        </a>
+        </motion.a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
