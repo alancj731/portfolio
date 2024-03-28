@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../../sidebar/sidebar.scss";
 
@@ -26,11 +26,14 @@ const itemVariants = {
   },
 };
 
-const handleClick = (e) => {
-  console.log(e.target.id);
-};
-
 const Links = () => {
+  
+  const [focusItem, setFocusItem] = useState(0);
+
+  const handleClick = (e) => {
+    console.log(e.target.id);
+  };
+  
   const items = ["Homepage", "Portfolio", "Contact", "About"];
   return (
     <motion.div className="links" variants={variants}>
@@ -41,6 +44,7 @@ const Links = () => {
           key={item}
           variants={itemVariants}
           onClick={(e) => handleClick(e)}
+          className={index === focusItem ? "active" : ""}
         >
           {item}
         </motion.a>

@@ -27,6 +27,11 @@
             justify-content: start;
             gap: 20px;
             color: black;
+
+            .active{
+                color: rgba($color: #4a83ef, $alpha: 1.0);
+                font-weight: bold;
+            }
     
             a{  
                 transition: all 0.5s ease;
@@ -39,8 +44,7 @@
                     border-radius: 10px;
                     background: linear-gradient(to right,  #fbfbfa, #f4f4f2, ),;
                     font-size: 30px;
-                }
-                
+                }  
             }
         }
     }
