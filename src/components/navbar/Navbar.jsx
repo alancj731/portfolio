@@ -6,15 +6,19 @@ import Sidebar from "../sidebar/Sidebar";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
       <div className="wrapper">
-        <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-        >
-          DevOps
-        </motion.span>
+        <div className="welcome">
+          <motion.span
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Welcome
+          </motion.span>
+        </div>
         <div className="social">
           <a href="#">
             <img src="/facebook.png" alt="facebook icon"></img>

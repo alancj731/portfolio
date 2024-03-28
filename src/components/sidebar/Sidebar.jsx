@@ -14,7 +14,7 @@ const Sidebar = () => {
       clipPath: "circle(1200px at 50px 50px)",
       transition: {
         type: "spring",
-        stiffness: 20,
+        stiffness: 40,
       },
     },
     closed: {
@@ -30,6 +30,7 @@ const Sidebar = () => {
 
   return (
     <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+      
       <motion.div className="bg" variants={variants}>
         <Links />
       </motion.div>

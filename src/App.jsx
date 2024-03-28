@@ -3,17 +3,12 @@ import Navbar from "/src/components/navbar/Navbar";
 
 const App = () => {
   return <div>
-    <section>
+    <section id="Homepage">
       <Navbar />
     </section>
-    <section>Two</section>
-    <section>Three</section>
-    <section>Four</section>
-    <section>Five</section>
-    <section>Six</section>
-    <section>Seven</section>
-    <section>Contact</section>
-
+    <section id="Portfolio">Three</section>
+    <section id="Contact">Seven</section>
+    <section id="About">Contact</section>
 
   </div>;
 };
