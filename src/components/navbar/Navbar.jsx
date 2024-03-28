@@ -11,26 +11,17 @@ const Navbar = () => {
       </div>
       <div className="wrapper">
         <div className="welcome">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+          <span
           >
-            Welcome
-          </motion.span>
+            <img id="hello" src="/welcome.gif" alt="hello icon"></img>
+          </span>
         </div>
         <div className="social">
           <a href="#">
-            <img src="/facebook.png" alt="facebook icon"></img>
+            <img src="/linkedin.webp" alt="LinkedIn icon"></img>
           </a>
           <a href="#">
-            <img src="/instagram.png" alt="instagram icon"></img>
-          </a>
-          <a href="#">
-            <img src="/youtube.png" alt="youtube icon"></img>
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="dribbble icon"></img>
+            <img src="/github.png" alt="Github icon"></img>
           </a>
         </div>
       </div>

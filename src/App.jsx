@@ -1,16 +1,18 @@
-import "./app.scss"
+import "./app.scss";
 import Navbar from "/src/components/navbar/Navbar";
 
 const App = () => {
-  return <div>
-    <section id="Homepage">
-      <Navbar />
-    </section>
-    <section id="Portfolio">Three</section>
-    <section id="Contact">Seven</section>
-    <section id="About">Contact</section>
+  return (
+    <div>
+      <section id="Homepage">
+        <Navbar />
+      </section>
+      <section id="Portfolio">Three</section>
+      <section id="Contact">Seven</section>
+      <section id="About">Contact</section>
 
-  </div>;
+    </div>
+  );
 };
 
 export default App;

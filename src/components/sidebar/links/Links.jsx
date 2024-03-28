@@ -31,7 +31,13 @@ const Links = () => {
   const [focusItem, setFocusItem] = useState(0);
 
   const handleClick = (e) => {
-    console.log(e.target.id);
+    console.log(e.target.className)
+    // set current target to active
+    e.target.className="active" 
+    // set previous active target to idle
+    document.getElementById(focusItem).className="idle"
+    // record id of active items
+    setFocusItem(e.target.id)
   };
   
   const items = ["Homepage", "Portfolio", "Contact", "About"];
@@ -44,7 +50,7 @@ const Links = () => {
           key={item}
           variants={itemVariants}
           onClick={(e) => handleClick(e)}
-          className={index === focusItem ? "active" : ""}
+          className={index === focusItem ? "active" : "idle"}
         >
           {item}
         </motion.a>
