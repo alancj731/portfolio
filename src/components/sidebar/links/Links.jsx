@@ -26,20 +26,21 @@ const itemVariants = {
   },
 };
 
-const handleClick = () => {
-  console.log("clicked");
+const handleClick = (e) => {
+  console.log(e.target.id);
 };
 
 const Links = () => {
   const items = ["Homepage", "Portfolio", "Contact", "About"];
   return (
     <motion.div className="links" variants={variants}>
-      {items.map((item) => (
+      {items.map((item, index) => (
         <motion.a
           href={`#${item}`}
+          id={index}
           key={item}
           variants={itemVariants}
-          onClick={handleClick}
+          onClick={(e) => handleClick(e)}
         >
           {item}
         </motion.a>
