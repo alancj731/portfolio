@@ -5,17 +5,16 @@ import "../../sidebar/sidebar.scss";
 const variants = {
   open: {
     transition: {
-      staggerChildren: 1,
+      staggerChildren: 0.1,
     },
   },
   closed: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.05,
       staggerDirection: -1,
     },
   },
 };
-
 const itemVariants = {
   open: {
     y: 0,
