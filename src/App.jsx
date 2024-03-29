@@ -2,19 +2,22 @@ import "./app.scss";
 import Navbar from "/src/components/navbar/Navbar";
 import Person from "./components/person/Person";
 import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
     <div>
       <section id="Homepage">
-      <Navbar />
+        <Navbar />
         <div className="pageContainer">
           <Person />
         </div>
       </section>
       <Portfolio />
-      <section id="Contact">Seven</section>
-      <section id="About">Contact</section>
+      <section id="Contact">
+        <Contact />
+      </section>
+      <div id="About">About</div>
     </div>
   );
 };

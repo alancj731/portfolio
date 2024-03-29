@@ -23,50 +23,38 @@ const items = [
   },
   {
     id: 4,
-    title: "Music App",
+    title: "New App",
     img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "Coming soon!",
   },
 ];
 
 const Single = ({ item }) => {
-  const ref = useRef(0);
+  const imageRef = useRef();
 
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: imageRef,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
   return (
-    <section ref={ref} id={item.id === 1 ? "Portfolio" : item.id}>
+    <section id={item.id === 1 ? "Portfolio" : item.id}>
       <div className="container">
         <div className="wrapper">
-          <motion.div className="imageContainer">
+          <div className="imageContainer" ref={imageRef}>
             <img src={item.img} alt="" />
-          </motion.div>
-          <motion.div className="textContainer">
+          </div>
+          <div className="textContainer">
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>Go Live</button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
-
-// const ref = useRef(0);
-
-// const {scrollYProgress} = useScroll({
-//     target: ref,
-//     offset: ["end end", "start start"]
-// });
-
-// const scaleX = useSpring(scrollYProgress, {
-//     stiffness: 100,
-//     damping: 30,
-// });
 
 const Portfolio = () => {
   const ref = useRef(0);

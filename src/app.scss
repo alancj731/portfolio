@@ -11,8 +11,8 @@ html{
 }
 
  body {
-    // background: linear-gradient(180deg,  #040204, #0c0c3c);
-    background: #040204;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    // background: #040204;
     color: lightgray;
  }
 
@@ -36,4 +36,6 @@ section{
     background-size: cover; /* Cover the entire page */
     background-position: top;
     background-repeat: no-repeat; /* Prevent the background image from repeating */
+    display: flex;
+    flex-direction: column;
 }
