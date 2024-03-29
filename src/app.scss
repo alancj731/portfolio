@@ -27,5 +27,9 @@ section{
 }
 
 .pageContainer{
-    background: linear-gradient(180deg,  #040204, #0c0c3c);
+    // background: linear-gradient(180deg,  #040204, #0c0c3c);
+    background-image: url('banner.png');
+    background-size: cover; /* Cover the entire page */
+    background-position: top;
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
 }

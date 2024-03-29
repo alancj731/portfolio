@@ -1,5 +1,6 @@
 import "./person.scss";
 import { motion } from "framer-motion";
+import {useState} from "react";
 
 const textVariants = {
   hidden: {
@@ -24,6 +25,25 @@ const textVariants = {
   }
 };
 
+const imageVariants = {
+  hidden: {
+    opacity: 0,
+    x: 0,
+    y: -400,
+    scale: 0,
+  },
+  visible: {
+    opacity: 1,
+    x: -300,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 3,
+    },
+  },
+};
+
+
 
 
 const Person = () => {
@@ -32,7 +52,7 @@ const Person = () => {
       <div className="wrapper">
         <motion.div className="textContainer" variants={textVariants} initial="hidden" animate="visible">
           <motion.h2 variants={textVariants}> Jian Chen</motion.h2>
-          <motion.h1 variants={textVariants}>Web Developer Data Engineer</motion.h1>
+          <motion.h1 variants={textVariants}>Web Developer<br/>Data Engineer</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
             <motion.button variants={textVariants}>My Personal Projects</motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
@@ -40,9 +60,9 @@ const Person = () => {
           <motion.img src="scroll.png" alt="scroll" animate="scroll" variants={textVariants}/>
         </motion.div>
       </div>
-      <div className="imageContainer">
-        <img src="myself.jpeg" alt="me" />
-      </div>
+      <motion.div className="imageContainer" variants={imageVariants} initial="hidden" animate="visible">
+        <motion.img src="header-img.svg" alt="me" className="floatingImg" />
+      </motion.div>
     </div>
   );
 };
