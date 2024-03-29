@@ -11,12 +11,12 @@
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 0;
         width: 260px;
+        height: 100vh;
         background-color: white;
 
         .links{
-            position: absolute;
+            position: relative;
             margin-top: 180px;
             margin-left: 10px;
             height: 100%;
@@ -39,8 +39,6 @@
                 &:hover {
                     padding-left: 10px;
                     padding-right: 10px;
-                    // box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-                    // background: rgba(235, 228, 228, 0.5);
                     border-radius: 10px;
                     background: linear-gradient(to right,  #fbfbfa, #f4f4f2, ),;
                     font-size: 30px;

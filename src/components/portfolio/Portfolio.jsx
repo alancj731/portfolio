@@ -30,7 +30,30 @@ const items = [
 ];
 
 const Single = ({ item }) => {
-  return <section>{item.title}</section>;
+  const ref = useRef(0);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  return (
+    <section ref={ref} id={item.id === 1 ? "Portfolio" : item.id}>
+      <div className="container">
+        <div className="wrapper">
+          <motion.div className="imageContainer">
+            <img src={item.img} alt="" />
+          </motion.div>
+          <motion.div className="textContainer">
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button>Go Live</button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 // const ref = useRef(0);
@@ -47,6 +70,7 @@ const Single = ({ item }) => {
 
 const Portfolio = () => {
   const ref = useRef(0);
+
   const { scrollYProgress } = useScroll({
     target: ref,
   });
