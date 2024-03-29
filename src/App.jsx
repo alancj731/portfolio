@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <section id="Homepage">
-        <Navbar />
+      <Navbar />
         <div className="pageContainer">
           <Person />
         </div>

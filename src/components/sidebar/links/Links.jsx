@@ -26,20 +26,26 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
-  
+const Links = ({ setOpen }) => {
   const [focusItem, setFocusItem] = useState(0);
 
   const handleClick = (e) => {
+    console.log(e.target.id);
     if (e.target.id === focusItem) return;
     // set current target to active
-    e.target.className="active" 
+    e.target.className = "active";
     // set previous active target to idle
-    document.getElementById(focusItem).className="idle"
+    document.getElementById(focusItem).className = "idle";
     // record id of active items
-    setFocusItem(e.target.id)
+    setFocusItem(e.target.id);
+
+    // if Homepage is not chosen, close sidebar
+    if (e.target.id != 0) {
+      console.log("id is not 0");
+      setOpen(false);
+    }
   };
-  
+
   const items = ["Homepage", "Portfolio", "Contact", "About"];
   return (
     <motion.div className="links" variants={variants}>
