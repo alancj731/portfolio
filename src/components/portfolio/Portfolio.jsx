@@ -27,7 +27,8 @@ const items = [
   {
     id: 4,
     title: "New App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    // img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "/land.jpg ",
     desc: "Coming soon!",
     link: "https://youtube.com",
   },
