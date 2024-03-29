@@ -41,7 +41,7 @@ const Person = () => {
         </motion.div>
       </div>
       <div className="imageContainer">
-        <img src="hero.png" alt="me" />
+        <img src="myself.jpeg" alt="me" />
       </div>
     </div>
   );

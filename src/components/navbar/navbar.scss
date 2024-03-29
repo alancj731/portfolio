@@ -1,6 +1,7 @@
 .navbar{
     height: 100px;
     display: flex;
+    background: #040204;
 
     .wrapper{
         width: 100%;
@@ -13,7 +14,7 @@
         .welcome{
             img{
                 width: 120px;
-                height: 80px;
+                height:px;
             }
         }
         
@@ -21,8 +22,8 @@
             display: flex;
             gap: 20px;
             img{
-                width: 30px;
-                height: 30px;
+                width: 50px;
+                height: 50px;
             }
 
         }

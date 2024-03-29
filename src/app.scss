@@ -11,7 +11,8 @@ html{
 }
 
  body {
-    background-color:#10101f;
+    // background: linear-gradient(180deg,  #040204, #0c0c3c);
+    background: #040204;
     color: lightgray;
  }
 
@@ -23,4 +24,8 @@ section{
    height: 100vh; 
    scroll-snap-align: center;
 
+}
+
+.pageContainer{
+    background: linear-gradient(180deg,  #040204, #0c0c3c);
 }
