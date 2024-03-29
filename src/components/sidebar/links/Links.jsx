@@ -31,7 +31,7 @@ const Links = () => {
   const [focusItem, setFocusItem] = useState(0);
 
   const handleClick = (e) => {
-    console.log(e.target.className)
+    if (e.target.id === focusItem) return;
     // set current target to active
     e.target.className="active" 
     // set previous active target to idle
