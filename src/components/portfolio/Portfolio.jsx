@@ -8,24 +8,28 @@ const items = [
     title: "Tetris Game",
     img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     desc: "A Teris game built in JavaScript, HTML, and CSS.",
+    link: "https://alancj731.github.io/tetris-js",
   },
   {
     id: 2,
     title: "Sorting Program",
     img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     desc: "A program shows how sorting algorithms work.",
+    link: "https://sorting-ten.vercel.app",
   },
   {
     id: 3,
     title: "Memo Helper",
     img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     desc: "A Next Js program that helps you remember things.",
+    link: "https://youtube.com",
   },
   {
     id: 4,
     title: "New App",
     img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     desc: "Coming soon!",
+    link: "https://youtube.com",
   },
 ];
 
@@ -48,7 +52,7 @@ const Single = ({ item }) => {
           <div className="textContainer">
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>Go Live</button>
+            <button onClick={()=>{window.open(item.link, '_blank')}}>Go Live</button>
           </div>
         </div>
       </div>

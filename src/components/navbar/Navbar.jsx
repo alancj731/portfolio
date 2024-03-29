@@ -17,10 +17,10 @@ const Navbar = () => {
           </span>
         </div>
         <div className="social">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/alanchenjian/">
             <img src="/linkedin.webp" alt="LinkedIn icon"></img>
           </a>
-          <a href="#">
+          <a href="https://github.com/alancj731">
             <img src="/github.png" alt="Github icon"></img>
           </a>
         </div>
