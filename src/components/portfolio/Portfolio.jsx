@@ -20,7 +20,7 @@ const items = [
   {
     id: 3,
     title: "Memo Helper",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "balloon.jpg",
     desc: "A Next Js program that helps you remember things.",
     link: "https://youtube.com",
   },
