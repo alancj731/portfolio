@@ -14,12 +14,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: start;
-  gap: 50px;
+  justify-items: center;
+  gap: 40px;
 
   .messageContainer {
     position: relative;
-    top: 60px;
+    top: 0px;
     width: 90%;
     height: 90%;
     display: flex;
@@ -76,14 +76,14 @@
   .contactContainer {
     // transition: all 4s ease;
     width: 100%;
-    top: 200px;
+    top: 100px;
     position: relative;
     height: 10%;
     display: flex;
     justify-content: center;
     letter-spacing: 2px;
     .contactInfo {
-      width: 22%;
+      width: 30%;
       display: flex;
       justify-content: center;
       align-items: center;
