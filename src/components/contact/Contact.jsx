@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 
 const variants = {
   initial: {
@@ -48,47 +48,46 @@ const Contact = () => {
 
   return (
     <div>
-        <h1 className="title"> Contact Me </h1>
-    <motion.div
-      ref={ref}
-      className="contactPage"
-      variants={variants}
-      initial="initial"
-      whileInView="animate"
-    >
-
-      <div className="messageContainer">
-        <motion.div className="imageContainer" variants={variants}>
-          <img src="contact-img.svg" alt="" />
+      <h1 className="title"> Contact Me </h1>
+      <motion.div
+        ref={ref}
+        className="contactPage"
+        variants={variants}
+        initial="initial"
+        whileInView="animate"
+      >
+        <div className="messageContainer">
+          <motion.div className="imageContainer" variants={variants}>
+            <img src="contact-img.svg" alt="" />
+          </motion.div>
+          <div className="formContainer" variants={variants}>
+            <motion.form
+              ref={formRef}
+              onSubmit={sendEmail}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 5 }}
+            >
+              <input type="text" required placeholder="Name" name="name" />
+              <input type="email" required placeholder="Email" name="email" />
+              <textarea rows={8} placeholder="Message" name="message" />
+              <button>Submit</button>
+              {error && "Error"}
+              {success && "Success"}
+            </motion.form>
+          </div>
+        </div>
+        <motion.div className="contactContainer">
+          <div className="contactInfo">
+            <span className="key">MAIL:</span>
+            <span className="value">ALANCHENJIAN@HOTMAIL.COM</span>
+          </div>
+          <div className="contactInfo">
+            <span className="key">PHONE:</span>
+            <span className="value">+1 431 668 2518</span>
+          </div>
         </motion.div>
-        <div className="formContainer"  variants={variants}>
-          <motion.form
-            ref={formRef}
-            onSubmit={sendEmail}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
-          >
-            <input type="text" required placeholder="Name" name="name" />
-            <input type="email" required placeholder="Email" name="email" />
-            <textarea rows={8} placeholder="Message" name="message" />
-            <button>Submit</button>
-            {error && "Error"}
-            {success && "Success"}
-          </motion.form>
-        </div>
-      </div>
-      <motion.div className="contactContainer">
-        <div className="contactInfo">
-          <span className="key">MAIL:</span>
-          <span className="value">ALANCHENJIAN@HOTMAIL.COM</span>
-        </div>
-        <div className="contactInfo">
-          <span className="key">PHONE:</span>
-          <span className="value">+1 431 668 2518</span>
-        </div>
       </motion.div>
-    </motion.div>
     </div>
   );
 };
