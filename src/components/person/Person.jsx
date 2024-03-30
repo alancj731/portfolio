@@ -54,8 +54,8 @@ const Person = () => {
           <motion.h2 variants={textVariants}> Jian Chen</motion.h2>
           <motion.h1 variants={textVariants}>Web Developer<br/>Data Engineer</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>My Personal Projects</motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={()=>{window.location.href='#Portfolio'}}>My Personal Projects</motion.button>
+            <motion.button variants={textVariants } onClick={()=>{window.location.href='#Contact'}}>Contact Me</motion.button>
           </motion.div>
           <motion.img src="scroll.png" alt="scroll" animate="scroll" variants={textVariants}/>
         </motion.div>
