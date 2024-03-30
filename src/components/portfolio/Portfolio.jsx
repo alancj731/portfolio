@@ -6,14 +6,14 @@ const items = [
   {
     id: 1,
     title: "Tetris Game",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "tetris.gif",
     desc: "A Teris game built in JavaScript, HTML, and CSS.",
     link: "https://alancj731.github.io/tetris-js",
   },
   {
     id: 2,
     title: "Sorting Program",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "sorting.gif",
     desc: "A program shows how sorting algorithms work.",
     link: "https://sorting-ten.vercel.app",
   },
@@ -53,7 +53,13 @@ const Single = ({ item }) => {
           <div className="textContainer">
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button onClick={()=>{window.open(item.link, '_blank')}}>Go Live</button>
+            <button
+              onClick={() => {
+                window.open(item.link, "_blank");
+              }}
+            >
+              Go Live
+            </button>
           </div>
         </div>
       </div>
