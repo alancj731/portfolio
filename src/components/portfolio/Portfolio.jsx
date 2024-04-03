@@ -22,7 +22,7 @@ const items = [
     title: "Memo Helper",
     img: "balloon.jpg",
     desc: "A Next Js program that helps you remember things.",
-    link: "https://youtube.com",
+    link: "https://https://new-memo.vercel.app/",
   },
   {
     id: 4,
