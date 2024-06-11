@@ -7,7 +7,7 @@ const items = [
     id: 1,
     title: "Tetris Game",
     img: "tetris.gif",
-    desc: "A Teris game built in JavaScript, HTML, and CSS.",
+    desc: "A Teris game built in JavaScript, HTML, and CSS. Use AFJL to control the game.",
     link: "https://alancj731.github.io/tetris-js",
   },
   {
@@ -26,11 +26,11 @@ const items = [
   },
   {
     id: 4,
-    title: "New App",
+    title: "Shift Schedule App",
     // img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     img: "/land.jpg ",
-    desc: "Coming soon!",
-    link: "https://youtube.com",
+    desc: "Upload and share shift file with your team. Built with Auth 0 and Firebase. Use admin@bestbuy.ca and user@bestbuy.ca to login. Password is Bestbuy032best!.",
+    link: "https://bbshift.vercel.app/",
   },
 ];
 
